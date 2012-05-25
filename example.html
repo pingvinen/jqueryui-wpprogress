@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+	    <title>Windows Phone Progress "Bar"</title>
+  	</head>
+	<body>
+		<div id="test1" style="border: 1px solid #000; margin-bottom: 10px; height: 40px;"></div>
+		<div id="test2" style="border: 1px solid #000; margin-bottom: 10px; height: 40px; width: 500px"></div>
+		<div id="test3" style="border: 1px solid #000; margin-bottom: 10px; height: 40px; width: 100px"></div>
+		
+		<br><br>
+		
+		<button onclick="start()">Start</button>
+		<button onclick="stop()">Stop</button>
+
+		<!-- jQuery -->
+		<script src="jquery-1.7.2.min.js"></script>
+		<script src="jquery-ui-1.8.20.custom.min.js"></script>
+				
+		<script src="jquery-ui-wpprogress.js"></script>
+		
+		<script type="text/javascript">
+			var bars = [];
+			
+			$(document).ready(function() {
+				bars = [
+					$("#test1"),
+					$("#test2"),
+					$("#test3")
+				];
+				
+				for (var x in bars) {
+					bars[x].wpprogress({
+						"enableDebug": true
+					});
+				}
+			});
+			
+			function start() {
+				for (var x in bars) {
+					bars[x].wpprogress("start");
+				}
+			}
+			
+			function stop() {
+				for (var x in bars) {
+					bars[x].wpprogress("stop");
+				}
+			}
+		</script>
+	</body>
+</html>
