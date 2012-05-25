@@ -24,24 +24,21 @@ Options
 		<th>Option</th>
 		<th>Type</th>
 		<th>Default</th>
+		<th>Description</th>
 	</tr>
 	
 	<tr>
 		<td>bubbleBackgroundColor</td>
 		<td>String</td>
 		<td>"#00f"</td>
-	</tr>
-	<tr>
-		<td colspan="3">The background color to use for the bubbles</td>
+		<td>The background color to use for the bubbles</td>
 	</tr>
 	
 	<tr>
 		<td>enableDebug</td>
 		<td>Boolean</td>
 		<td>false</td>
-	</tr>
-	<tr>
-		<td colspan="3">Whether to enable debugging features</td>
+		<td>Whether to enable debugging features</td>
 	</tr>
 </table>
 
